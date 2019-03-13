@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tempclass</title>
+</head>
+<body>
+<script>
+    var Temperature = function(C) {
+        if (C < -273) {
+            alert("Nhiệt độ chuyển đổi quá thấp!")
+        } else {
+            this.c = C;
+            this.getTemp = function () {
+                return this.c;
+            }
+            this.setTemp = function (c) {
+                this.c = C;
+            }
+        }
+
+    }
+
+    let x = new Temperature(25);
+    let c = x.getTemp();
+
+    alert("Tương đương " + (c * 9/5 + 32) + " độ F và " + (c + 273.15) + " độ K");
+</script>
+</body>
+</html>
